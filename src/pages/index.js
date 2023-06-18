@@ -2,7 +2,7 @@ import * as React from 'react';
 import Layout from '../components/Layout';
 import { StaticImage } from 'gatsby-plugin-image';
 import AllRecipes from '../components/AllRecipes';
-import Social from '../components/Social';
+// import Social from '../components/Social';
 
 export default function Home() {
   return (

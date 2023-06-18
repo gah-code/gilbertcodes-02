@@ -4,7 +4,7 @@ import { FiAlignJustify } from 'react-icons/fi';
 // import logo from '../assets/images/logo.svg';
 import logo from '../assets/images/logo.svg';
 
-const NavBar = () => {
+const Navbar = () => {
   const [show, setShow] = useState(false);
   return (
     <nav className='navbar'>
@@ -61,4 +61,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default Navbar;
