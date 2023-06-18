@@ -1,5 +1,5 @@
 import React from 'react';
-import NavBar from './NavbBar';
+import Navbar from './Navbar';
 import Footer from './Footer';
 
 import '../assets/styles/reset.css';
@@ -8,7 +8,7 @@ import '../assets/styles/main.css';
 const Layout = ({ children }) => {
   return (
     <>
-      <NavBar />
+      <Navbar />
       {children}
       <Footer />
     </>
