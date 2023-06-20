@@ -10,12 +10,16 @@ export default function Home() {
       <main className='page'>
         <section className='about-pages'>
           <article>
-            <h1>I'm baby coloring book poke taxidermy</h1>
-            <h2>Subheading</h2>
-
+            <h1>What's up, I'm Gilbert</h1>
             <p>
-              Taxidermy forage glossier letterpress heirloom before they sold
-              out you probably haven't heard of them banh mi biodiesel chia.
+              web developer and this is where I coding things
+              <a href=''> web apps about topics</a>
+            </p>
+
+            <p className='hero-description'>
+              web developer and this is where I coding things Lorem ipsum dolor
+              sit amet consectetur adipisicing elit. Quam, nesciunt!
+              <a href=''> web apps about topics</a>
             </p>
 
             <button className='rounded-hover-button'>Hover Me</button>

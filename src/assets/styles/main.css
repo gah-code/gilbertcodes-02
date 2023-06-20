@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Inter:wght@400;500;600;700&display=swap');
+
 *,
 ::after,
 ::before {
@@ -13,6 +15,22 @@
   --primary-200: #aaa5ff;
   --primary-300: #938dff;
   --primary-400: #7b74ff;
+
+  /* secondary */
+  /* Colors */
+  --gray-0: #f9f9f9;
+  --gray-05: #f6f6f6;
+  --gray-1: #eee;
+  --gray-2: #e6e6e6;
+  --gray-3: #ddd;
+  --gray-4: #bbb;
+  --gray-5: #999;
+  --gray-6: #666;
+  --gray-65: #555;
+  --gray-7: #2c2c2c;
+  --gray-8: #252525;
+  --gray-9: #1f1f1f;
+  --gray-10: #181818;
   /* main */
   --primary-500: #645cff;
   --primary-600: #554ed9;
@@ -22,7 +40,7 @@
   --primary-1000: #191740;
   --primary-1100: #0a0919;
   /* grey */
-  --grey-0: #fafbfc;
+  --grey-0: #f9f9f9;
   --grey-50: #f2f4f8;
   --grey-100: #eaedf3;
   --grey-200: #e2e7ef;
@@ -35,6 +53,15 @@
   --grey-900: #51545a;
   --grey-1000: #333538;
   --grey-1100: #141516;
+
+  /* Font family */
+  --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont,
+    'Helvetica Neue', Arial, sans-serif;
+  --font-family-monospace: Menlo, 'IBM Plex Mono', Menlo, monospace;
+  --font-family-heading: -apple-system, BlinkMacSystemFont, 'Helvetica Neue',
+    Arial, sans-serif;
+  --font-family-nav: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial,
+    sans-serif;
 
   /* rest */
   --black: #222;
@@ -57,9 +84,16 @@
   --bodyFont: 'Montserrat', sans-serif;
   --smallText: 0.8em;
   --extraSmallText: 0.7em;
+  /* Font color */
+  --font-color-base: var(--grey-100);
+  --font-color-muted: var(--gray-6);
+  --font-color-heading: var(--grey-0);
+  --font-color-heading3: var(--gray-7);
+  --font-color-bright: var(--gray-9);
+  --font-color-hero-heading: var(--gray-0);
   /* rest */
-  --backgroundColor: var(--grey-0);
-  --textColor: var(--grey-1000);
+  --backgroundColor: #2b3549;
+  --textColor: #faf6ea;
   --borderRadius: 0.25rem;
   --letterSpacing: 1px;
   --transition: 0.3s ease-in-out all;
@@ -67,7 +101,11 @@
   --fixed-width: 600px;
 }
 html {
-  font-size: var(--defaultFontSize);
+  font-family: var(--font-family-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  line-height: 1.6;
 }
 @media only screen and (min-width: 576px) {
   :root {
@@ -85,37 +123,66 @@ body {
   color: var(--textColor);
   font-family: var(--bodyFont);
   font-weight: 400;
+  font-kerning: normal;
   font-size: 1rem;
-  line-height: 1.5rem;
 }
 
-p {
-  margin: 0;
+p,
+ul,
+ol,
+ul,
+table,
+blockquote {
+  font-size: 1rem;
+  color: var(--font-color-heading);
+}
+p:not(:last-child) {
   margin-bottom: 2rem;
-  max-width: 40em;
+}
+
+/* Headings */
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: var(--font-color-heading);
+  line-height: 1.1;
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+  scroll-margin-top: 3rem;
+}
+
+h1:not(:first-child),
+h2:not(:first-child),
+h3:not(:first-child),
+h4:not(:first-child) {
+  margin-top: 1.4rem;
+}
+
+h2 + h3 {
+  margin-top: 1.5rem !important;
 }
 
 h1 {
   font-weight: 800;
-  font-size: 2.4rem;
-  line-height: 2.375rem;
-  margin: 0.5rem 0 1.5rem 0;
+  font-size: 2.5rem;
 }
 
 h2 {
-  /* font-size: 2.241rem; */
+  font-size: 1.8rem;
+  margin: 0 0 1rem;
   font-weight: 700;
-  font-size: 1.55rem;
-  line-height: 1.5rem;
-  margin: 0 0 0.4rem 0;
+  padding-bottom: 0.4rem;
+  letter-spacing: -0.05rem;
 }
 
 h3 {
-  /* font-size: 1.953rem; */
-  font-weight: 600;
-  font-size: 1.45rem;
-  line-height: 2.25rem;
-  margin-bottom: 3rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1.25rem;
 }
 
 h4 {
@@ -498,6 +565,14 @@ form > *:last-child {
     align-items: center;
     margin-right: 0;
   }
+}
+
+p.hero-description {
+  color: var(--font-color-base);
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-top: 1.5rem;
+  font-weight: 500;
 }
 
 /*#########*/
