@@ -99,6 +99,13 @@
   --transition: 0.3s ease-in-out all;
   --max-width: 1120px;
   --fixed-width: 600px;
+
+  /* Sizs */
+  --content-width: 1160px;
+  --content-width--small: 560px;
+  --content-width--medium: 700px;
+  --navbar-height-large: 80px;
+  --navbar-height-small: 60px;
 }
 html {
   font-family: var(--font-family-base);
@@ -379,12 +386,151 @@ button.block {
 }
 
 .container {
-  padding: 5rem 0;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--content-width);
+  padding: 0 1rem;
 }
-.container-center {
-  width: 90vw;
-  max-width: var(--max-width);
-  margin: 0 auto;
+
+.hero-wrapper {
+  display: grid;
+}
+
+.hero {
+  padding: 1rem 0 0;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  line-height: 1.1;
+  font-weight: 700;
+  color: var(--font-color-heading);
+  margin: 0;
+}
+
+.main {
+  flex: 1 1;
+}
+
+p.hero-description {
+  -webkit-font-smoothing: antialiased;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--font-color-base);
+  font-weight: 500;
+  letter-spacing: -0.01rem;
+}
+
+p.hero-description a {
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+}
+
+p.hero-description a:hover {
+  text-decoration: none;
+}
+
+.hero .sub-title {
+  color: var(--font-color-muted);
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+.width.small {
+  max-width: var(--content-width--small);
+}
+@media screen and (min-width: 700px) {
+  .hero-wrapper {
+    grid-template-columns: 3fr 2fr;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  p.hero-description {
+    margin-bottom: 0;
+    font-size: 1.2rem;
+  }
+
+  .hero {
+    padding: 1.5rem 0 0.5rem;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero.index {
+    padding: 0rem 0 3rem;
+  }
+}
+
+.highlight {
+  color: var(--highlight-color);
+}
+
+.hero-image {
+  max-width: 250px;
+}
+
+@media screen and (min-width: 700px) {
+  .hero-image {
+    max-width: 100%;
+  }
+}
+
+.post-header {
+  padding: 1rem 0 0.5rem;
+}
+
+.post-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.05rem;
+  line-height: 1.2;
+  margin: 0;
+}
+
+@media screen and (min-width: 700px) {
+  .post-header h1 {
+    font-size: 2.6rem;
+    line-height: 1.2;
+  }
+}
+
+.article-content {
+  max-width: 100%;
+  min-width: 0;
+}
+
+.post-header {
+  padding: 1rem 0 0.5rem;
+}
+.width.medium {
+  max-width: var(--content-width--medium);
+}
+
+.segment {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.segment.small {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.segment.large {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.segment.first {
+  margin-top: 3rem;
 }
 .page {
   width: 90vw;
