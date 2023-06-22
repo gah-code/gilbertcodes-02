@@ -22,7 +22,6 @@ export default function Home() {
                   I talk about
                   <a href=''> web apps about topics</a>
                 </p>
-                <button className='rounded-hover-button'>Hover Me</button>
               </header>
               <p className='hero-decoration'>
                 <StaticImage
